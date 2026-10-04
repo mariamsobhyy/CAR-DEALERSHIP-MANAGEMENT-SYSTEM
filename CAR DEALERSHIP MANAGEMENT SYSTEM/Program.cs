@@ -1,4 +1,5 @@
 using CAR_DEALERSHIP_MANAGEMENT_SYSTEM.Data;
+using CAR_DEALERSHIP_MANAGEMENT_SYSTEM.Mapping;
 using CAR_DEALERSHIP_MANAGEMENT_SYSTEM.Models;
 using CAR_DEALERSHIP_MANAGEMENT_SYSTEM.Repos.Implemntation;
 using CAR_DEALERSHIP_MANAGEMENT_SYSTEM.Repos.Interface;
@@ -16,6 +17,9 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
+builder.Services.AddAutoMapper(config => config.AddProfile<MappingProfile>());
 
 builder.Services.AddScoped<IGenaricRepo<Employee>, GenaricRepo<Employee>>();
 builder.Services.AddScoped<IGenaricRepo<CustomerProfile>, GenaricRepo<CustomerProfile>>();

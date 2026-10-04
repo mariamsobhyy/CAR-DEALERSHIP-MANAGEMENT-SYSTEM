@@ -46,7 +46,7 @@ namespace CAR_DEALERSHIP_MANAGEMENT_SYSTEM.Controllers
 
 
 
-       [HttpGet("{id}")]
+        [HttpGet("{id}")]
         public IActionResult GetVehicleById(int id)
         {
             var vehicle = _unitOfWork.Vehicles.GetById(id);
@@ -67,26 +67,26 @@ namespace CAR_DEALERSHIP_MANAGEMENT_SYSTEM.Controllers
 
 
 
-        //[HttpGet]
-        //public IActionResult GetAllVehicles()
-        //{
-        //    var vehicles = _unitOfWork.Vehicles.GetAll();
-        //    return Ok(vehicles);
-        //}
-        //[HttpGet("{id}")]
-        //public IActionResult GetVehicleById(int id)
-        //{
-        //    var vehicle = _unitOfWork.Vehicles.GetById(id);
-        //    if (vehicle == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    return Ok(vehicle);
-        //}
-        //[HttpPost]
-        //public IActionResult CreateVehicle(Vehicle vehicle)
-        //{
-        //    _unitOfWork.Vehicles.Add(vehicle);
+            //[HttpGet]
+            //public IActionResult GetAllVehicles()
+            //{
+            //    var vehicles = _unitOfWork.Vehicles.GetAll();
+            //    return Ok(vehicles);
+            //}
+            //[HttpGet("{id}")]
+            //public IActionResult GetVehicleById(int id)
+            //{
+            //    var vehicle = _unitOfWork.Vehicles.GetById(id);
+            //    if (vehicle == null)
+            //    {
+            //        return NotFound();
+            //    }
+            //    return Ok(vehicle);
+            //}
+            //[HttpPost]
+            //public IActionResult CreateVehicle(Vehicle vehicle)
+            //{
+            //    _unitOfWork.Vehicles.Add(vehicle);
 
             //    _unitOfWork.Save();
 
@@ -117,5 +117,6 @@ namespace CAR_DEALERSHIP_MANAGEMENT_SYSTEM.Controllers
             //    _unitOfWork.Save();
             //    return NoContent();
             //}
+        }
     }
 }
