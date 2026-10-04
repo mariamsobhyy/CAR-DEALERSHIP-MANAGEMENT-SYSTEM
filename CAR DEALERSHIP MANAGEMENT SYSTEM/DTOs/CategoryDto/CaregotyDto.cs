@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace CAR_DEALERSHIP_MANAGEMENT_SYSTEM.Models
+namespace CAR_DEALERSHIP_MANAGEMENT_SYSTEM.DTOs.CategoryDto
 {
-    public class Category
+    public class CaregotyDto
     {
         [Key]
         public int Id { get; set; }
@@ -13,12 +13,11 @@ namespace CAR_DEALERSHIP_MANAGEMENT_SYSTEM.Models
         [MaxLength(200)]
         public string Description { get; set; }
 
-        //public int vehicleId { get; set; }
 
-        //public Vehicle? Vehicle { get; set; }
+        public string CategoryName { get; set; }
+
+       
 
 
-
-        public ICollection<Vehicle> Vehicles { get; set; } = new List<Vehicle>();
     }
 }

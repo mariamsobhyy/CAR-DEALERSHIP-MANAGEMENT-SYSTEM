@@ -40,8 +40,9 @@ namespace CAR_DEALERSHIP_MANAGEMENT_SYSTEM.Models
         [Required]
         public string Status { get; set; }
 
-        [ForeignKey("Sale")]
-        public int SaleId { get; set; }
+        //[ForeignKey("Sale")]
+       
+        //public int SaleId { get; set; }
 
         public Sale? Sale { get; set; }
 

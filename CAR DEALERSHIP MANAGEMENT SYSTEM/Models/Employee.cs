@@ -26,9 +26,9 @@ namespace CAR_DEALERSHIP_MANAGEMENT_SYSTEM.Models
 
         public ICollection<Sale> Sales { get; set; } = new List<Sale>();
 
-        public int SaleId { get; set; }
+        //public int SaleId { get; set; }
 
-        public Sale? Sale { get; set; }
+        //public Sale? Sale { get; set; }
     }
 }
 

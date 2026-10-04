@@ -1,17 +1,18 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using CAR_DEALERSHIP_MANAGEMENT_SYSTEM.Models;
+using System.ComponentModel.DataAnnotations;
 
-namespace CAR_DEALERSHIP_MANAGEMENT_SYSTEM.Models
+namespace CAR_DEALERSHIP_MANAGEMENT_SYSTEM.DTOs.CustomerDTO
 {
-    public class Customer
+    public class CutomerDto
     {
+
         [Key]
         public int Id { get; set; }
 
         [Required, MaxLength(150)]
         public string FullName { get; set; }
 
-        [Required ,EmailAddress]
+        [Required, EmailAddress]
         public string Email { get; set; }
 
         [Required, MaxLength(20)]
@@ -20,11 +21,7 @@ namespace CAR_DEALERSHIP_MANAGEMENT_SYSTEM.Models
         [Required, MaxLength(30)]
         public string DriverLicenseNumber { get; set; }
 
-        //[ForeignKey ("CustomerProfile")]
-        //public int CustomerProfileId { get; set; }
 
         public CustomerProfile? CustomerProfile { get; set; }
-
-        public ICollection<Sale> Sales { get; set; } = new List<Sale>();
     }
 }
